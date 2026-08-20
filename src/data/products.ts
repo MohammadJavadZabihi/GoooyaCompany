@@ -22,6 +22,7 @@ export const products: Product[] = [
     category: "پلتفرم",
     status: "live",
     accent: "#3B82F6",
+    image: "/images/products/gooya-core.jpg",
     icon: "core",
     audience: ["تیم‌های محصول", "معماران نرم‌افزار", "سازمان‌های چندسامانه‌ای"],
     features: [
@@ -98,6 +99,7 @@ export const products: Product[] = [
     category: "اتوماسیون",
     status: "live",
     accent: "#2563EB",
+    image: "/images/products/gooya-flow.jpg",
     icon: "flow",
     audience: ["عملیات", "منابع انسانی", "تیم‌های داخلی محصول"],
     features: [
@@ -172,6 +174,7 @@ export const products: Product[] = [
     category: "ابر و زیرساخت",
     status: "beta",
     accent: "#1D4ED8",
+    image: "/images/products/gooya-cloud.jpg",
     icon: "cloud",
     audience: ["تیم‌های DevOps", "فنی محصول", "محصولات در حال مقیاس"],
     features: [
@@ -239,6 +242,7 @@ export const products: Product[] = [
     category: "داده و تحلیل",
     status: "development",
     accent: "#60A5FA",
+    image: "/images/products/gooya-insight.jpg",
     icon: "analytics",
     audience: ["مدیران محصول", "رشد", "تحلیل‌گران"],
     features: [

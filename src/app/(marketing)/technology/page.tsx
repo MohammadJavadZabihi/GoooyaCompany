@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { PageHero } from "@/components/layout/PageHero";
 import { Container } from "@/components/ui/Container";
@@ -101,30 +102,18 @@ export default function TechnologyPage() {
                   </div>
                 </Reveal>
                 <Reveal delay={100}>
-                  <div
-                    className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-xl)] border border-border bg-elevated shadow-[var(--shadow-md)]"
-                    style={{
-                      background: `
-                        radial-gradient(circle at ${reverse ? "80%" : "20%"} 25%, rgba(37,99,235,0.14), transparent 45%),
-                        linear-gradient(145deg, #e8eef8, #f4f6f9 60%, #eef2f7)
-                      `,
-                    }}
-                  >
-                    <div className="absolute inset-6 rounded-xl border border-border bg-elevated/95 p-4 shadow-[var(--shadow-sm)]">
-                      <div className="h-2 w-1/4 rounded-full bg-accent/30" />
-                      <div className="mt-4 space-y-2">
-                        <div className="h-2 w-full rounded-full bg-muted" />
-                        <div className="h-2 w-5/6 rounded-full bg-muted" />
-                        <div className="h-2 w-2/3 rounded-full bg-muted" />
-                      </div>
-                      <div className="mt-6 grid grid-cols-2 gap-2">
-                        <div className="h-20 rounded-lg bg-panel" />
-                        <div className="h-20 rounded-lg bg-panel" />
-                      </div>
-                      <p className="absolute bottom-4 start-4 text-xs text-subtle">
-                        {cap.title}
-                      </p>
-                    </div>
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-xl)] border border-border bg-elevated shadow-[var(--shadow-md)]">
+                    <Image
+                      src={cap.image}
+                      alt={cap.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+                    <p className="absolute bottom-4 start-4 text-sm font-medium text-white">
+                      {cap.title}
+                    </p>
                   </div>
                 </Reveal>
               </div>

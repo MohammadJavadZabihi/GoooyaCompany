@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { productStatusLabel } from "@/data/products";
@@ -29,48 +30,27 @@ export function ProductCard({
     >
       <div
         className={cn(
-          "relative shrink-0 overflow-hidden border-b border-border",
+          "relative shrink-0 overflow-hidden border-b border-border bg-panel",
           large
-            ? "aspect-[16/11] md:aspect-auto md:h-auto md:w-[48%] md:border-b-0 md:border-e"
+            ? "aspect-[16/11] md:aspect-auto md:min-h-[16rem] md:w-[48%] md:border-b-0 md:border-e"
             : wide
               ? "aspect-[21/9] md:aspect-[2.4/1]"
               : "aspect-[16/10]",
         )}
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `
-              radial-gradient(circle at 18% 10%, ${product.accent}28, transparent 48%),
-              linear-gradient(165deg, #e8eef8 0%, #f4f6f9 55%, #eef2f7 100%)
-            `,
-          }}
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          sizes={
+            large
+              ? "(max-width: 768px) 100vw, 48vw"
+              : "(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+          }
+          className="object-cover transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.04]"
         />
-        <div
-          className={cn(
-            "absolute rounded-md border border-border bg-elevated/90 p-3 shadow-[var(--shadow-sm)] backdrop-blur-sm",
-            large ? "inset-5 md:inset-6" : "inset-x-4 bottom-4 top-8",
-          )}
-        >
-          <div className="mb-2 flex gap-1">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent/70" />
-            <span className="h-1.5 w-1.5 rounded-full bg-subtle/50" />
-            <span className="h-1.5 w-1.5 rounded-full bg-subtle/35" />
-          </div>
-          <div className="space-y-1.5">
-            <div className="h-1.5 w-1/3 rounded-full bg-accent/25" />
-            <div className="h-1.5 w-full rounded-full bg-muted" />
-            <div className="h-1.5 w-4/5 rounded-full bg-muted" />
-          </div>
-          {(large || wide) && (
-            <div className="mt-3 grid grid-cols-3 gap-1.5">
-              <div className="h-8 rounded bg-panel" />
-              <div className="h-8 rounded bg-panel" />
-              <div className="h-8 rounded bg-panel" />
-            </div>
-          )}
-        </div>
-        <span className="absolute start-3 top-3 rounded-md border border-border bg-elevated/90 px-2 py-0.5 text-[10px] text-muted shadow-[var(--shadow-sm)]">
+        <div className="absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-transparent" />
+        <span className="absolute start-3 top-3 rounded-md border border-border bg-elevated/95 px-2 py-0.5 text-[10px] text-muted shadow-[var(--shadow-sm)] backdrop-blur-sm">
           {productStatusLabel[product.status]}
         </span>
       </div>

@@ -36,6 +36,8 @@ export default function ContactPage() {
         eyebrow="تماس"
         title="بیایید چیزی بسازیم که دوام بیاورد"
         description="اول گوش می‌دهیم، بعد مسیر را روشن می‌کنیم."
+        backgroundImage="/images/contact-hero.jpg"
+        backgroundAlt="فضای کاری مدرن برای همکاری"
       />
 
       <Section className="pt-8 md:pt-10">

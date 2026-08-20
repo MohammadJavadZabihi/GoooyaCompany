@@ -18,6 +18,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "API Design"],
     year: "۱۴۰۳",
     accent: "#3B82F6",
+    image: "/images/projects/enterprise-ops.jpg",
     seo: {
       title: "پلتفرم عملیات سازمانی — نمونه کار گویا",
       description:
@@ -42,6 +43,7 @@ export const projects: Project[] = [
     technologies: ["React", "Node.js", "SQL", "Event Pipeline"],
     year: "۱۴۰۲",
     accent: "#2563EB",
+    image: "/images/projects/product-analytics.jpg",
     seo: {
       title: "مجموعه تحلیل محصول — نمونه کار گویا",
       description: "طراحی لایهٔ رویداد و داشبورد تصمیم‌یار توسط گویا.",
@@ -65,6 +67,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "Auth", "Design System", "Accessibility"],
     year: "۱۴۰۳",
     accent: "#1D4ED8",
+    image: "/images/projects/secure-portal.jpg",
     seo: {
       title: "پورتال امن مشتریان — نمونه کار گویا",
       description:

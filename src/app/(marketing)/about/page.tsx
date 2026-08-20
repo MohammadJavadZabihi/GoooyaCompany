@@ -32,10 +32,11 @@ export default function AboutPage() {
       />
 
       <PageHero
-        tone="navy"
         eyebrow="درباره گویا"
         title="نرم‌افزار را مثل یک حرفه می‌بینیم، نه یک خروجی سریع"
         description="گویا برای تیم‌هایی است که می‌خواهند محصول‌شان دقیق، قابل اتکا و انسانی باشد — نه فقط مدرن به نظر برسد."
+        backgroundImage="/images/about-hero.jpg"
+        backgroundAlt="همکاری تیمی در ساخت محصول"
       />
 
       <Section>

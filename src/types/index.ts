@@ -17,6 +17,7 @@ export type Product = {
   category: string;
   status: ProductStatus;
   accent: string;
+  image: string;
   icon: "cloud" | "flow" | "analytics" | "core" | "shield";
   audience: string[];
   features: ProductFeature[];
@@ -43,6 +44,7 @@ export type Project = {
   technologies: string[];
   year: string;
   accent: string;
+  image: string;
   seo: {
     title: string;
     description: string;
@@ -62,4 +64,5 @@ export type Capability = {
   outcomes: string[];
   useCases: string[];
   stack: string[];
+  image: string;
 };

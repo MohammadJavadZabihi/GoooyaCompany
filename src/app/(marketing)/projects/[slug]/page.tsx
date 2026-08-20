@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { ProjectCard } from "@/components/projects/ProjectCard";
@@ -77,15 +78,17 @@ export default async function ProjectDetailPage({ params }: Props) {
             </p>
           </Reveal>
           <Reveal delay={100}>
-            <div
-              className="mt-12 aspect-[21/9] overflow-hidden rounded-[var(--radius-xl)] border border-border shadow-[var(--shadow-md)]"
-              style={{
-                background: `
-                  radial-gradient(circle at 15% 30%, ${project.accent}28, transparent 40%),
-                  linear-gradient(135deg, #e4ebf5, #f4f6f9)
-                `,
-              }}
-            />
+            <div className="relative mt-12 aspect-[21/9] overflow-hidden rounded-[var(--radius-xl)] border border-border shadow-[var(--shadow-md)]">
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
+            </div>
           </Reveal>
         </Container>
       </section>

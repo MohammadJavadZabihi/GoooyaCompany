@@ -17,6 +17,7 @@ export const capabilities: Capability[] = [
       "کاهش وابستگی‌های شکننده",
     ],
     stack: ["Domain Design", "API Contracts", "Eventing", "Observability"],
+    image: "/images/tech/architecture.jpg",
   },
   {
     id: "web",
@@ -34,6 +35,7 @@ export const capabilities: Capability[] = [
       "محصول SaaS وب",
     ],
     stack: ["Next.js", "TypeScript", "Design Systems", "Accessibility"],
+    image: "/images/tech/web.jpg",
   },
   {
     id: "mobile",
@@ -51,6 +53,7 @@ export const capabilities: Capability[] = [
       "تجربهٔ مشتری موبایل‌محور",
     ],
     stack: ["Responsive Web", "PWA", "Native Bridges"],
+    image: "/images/tech/mobile.jpg",
   },
   {
     id: "cloud",
@@ -68,6 +71,7 @@ export const capabilities: Capability[] = [
       "مانیتورینگ عملیاتی",
     ],
     stack: ["Containers", "CI/CD", "IaC", "Monitoring"],
+    image: "/images/tech/cloud.jpg",
   },
   {
     id: "data",
@@ -85,6 +89,7 @@ export const capabilities: Capability[] = [
       "کمک‌یار هوشمند در جریان کار",
     ],
     stack: ["Pipelines", "SQL", "Analytics", "LLM Integration"],
+    image: "/images/tech/data-ai.jpg",
   },
   {
     id: "automation",
@@ -102,6 +107,7 @@ export const capabilities: Capability[] = [
       "اعلان و پیگیری درخواست",
     ],
     stack: ["Workflow Engines", "Webhooks", "Queues", "RBAC"],
+    image: "/images/tech/automation.jpg",
   },
 ];
 

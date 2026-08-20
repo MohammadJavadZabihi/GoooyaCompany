@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
 
@@ -12,40 +13,19 @@ export function Logo({ className, compact = false, inverse = false }: LogoProps)
     <Link
       href="/"
       className={cn(
-        "group inline-flex items-center gap-2 focus-visible:outline-offset-4",
+        "group inline-flex items-center gap-2.5 focus-visible:outline-offset-4",
         className,
       )}
       aria-label="گویا — صفحه اصلی"
     >
-      <span
-        className={cn(
-          "relative grid h-7 w-7 place-items-center overflow-hidden rounded-md border",
-          inverse
-            ? "border-white/20 bg-white/10"
-            : "border-border bg-navy text-white",
-        )}
-        aria-hidden
-      >
-        <svg
-          viewBox="0 0 32 32"
-          className={cn("h-4 w-4", inverse ? "text-white" : "text-white")}
-          fill="none"
-        >
-          <path
-            d="M8 22V10l8-4 8 4v12l-8 4-8-4Z"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M16 14v8M12 16.5 16 14l4 2.5"
-            stroke="#93C5FD"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </span>
+      <Image
+        src="/brand/gooya-logo.png"
+        alt="لوگوی گویا"
+        width={36}
+        height={36}
+        className="h-9 w-9 rounded-md object-cover shadow-[var(--shadow-sm)] ring-1 ring-border"
+        priority
+      />
       {!compact ? (
         <span
           className={cn(

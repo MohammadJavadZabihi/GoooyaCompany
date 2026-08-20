@@ -37,6 +37,11 @@ export function buildMetadata({
     authors: [{ name: siteConfig.legalName }],
     creator: siteConfig.name,
     metadataBase: new URL(siteConfig.url),
+    icons: {
+      icon: [{ url: "/brand/gooya-logo.png", type: "image/png" }],
+      apple: [{ url: "/brand/gooya-logo.png", type: "image/png" }],
+      shortcut: "/brand/gooya-logo.png",
+    },
     alternates: {
       canonical: url,
       languages: {
@@ -88,6 +93,8 @@ export function organizationJsonLd() {
     name: siteConfig.name,
     alternateName: siteConfig.nameEn,
     url: siteConfig.url,
+    logo: `${siteConfig.url}/brand/gooya-logo.png`,
+    image: `${siteConfig.url}/brand/gooya-logo.png`,
     description: siteConfig.description,
     email: siteConfig.email,
     telephone: siteConfig.phone,

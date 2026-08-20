@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { Project } from "@/types";
@@ -24,24 +25,27 @@ export function ProjectCard({
     >
       <div
         className={cn(
-          "relative overflow-hidden border-b border-border",
+          "relative overflow-hidden border-b border-border bg-panel",
           featured ? "aspect-[21/9] min-h-[12rem]" : "aspect-[16/10]",
         )}
       >
-        <div
-          className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.02]"
-          style={{
-            background: `
-              radial-gradient(circle at 20% 20%, ${project.accent}30, transparent 45%),
-              linear-gradient(145deg, #e4ebf5, #f4f6f9 55%, #e8eef6)
-            `,
-          }}
+        <Image
+          src={project.image}
+          alt={project.name}
+          fill
+          sizes={
+            featured
+              ? "100vw"
+              : "(max-width: 768px) 100vw, 50vw"
+          }
+          className="object-cover transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.03]"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-navy/10 to-transparent" />
         <div className="absolute inset-0 flex items-end justify-between p-5">
-          <span className="rounded-md border border-border bg-elevated/90 px-2.5 py-1 text-[11px] text-muted shadow-[var(--shadow-sm)]">
+          <span className="rounded-md border border-white/20 bg-black/35 px-2.5 py-1 text-[11px] text-white backdrop-blur-sm">
             {project.category}
           </span>
-          <span className="text-[11px] text-subtle">{project.year}</span>
+          <span className="text-[11px] text-white/80">{project.year}</span>
         </div>
       </div>
       <div className="flex flex-1 flex-col p-5 md:p-6">
